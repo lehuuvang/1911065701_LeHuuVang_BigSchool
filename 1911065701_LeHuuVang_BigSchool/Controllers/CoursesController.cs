@@ -19,6 +19,8 @@ namespace _1911065701_LeHuuVang_BigSchool.Controllers
         }
         
         [Authorize]
+        //[HttpPost]
+       //[ValidateAntiForgeryToken]
         public ActionResult Create(CourseViewModel viewModel)
         {
             if (!ModelState.IsValid)
