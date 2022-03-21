@@ -1,5 +1,7 @@
 ﻿using _1911065701_LeHuuVang_BigSchool.Models;
 using _1911065701_LeHuuVang_BigSchool.ViewModels;
+using Microsoft.AspNet.Identity;
+using Microsoft.Office.Interop.Outlook;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,24 +12,25 @@ namespace _1911065701_LeHuuVang_BigSchool.Controllers
 {
     public class CoursesController : Controller
     {
-        // GET: Courses
         private readonly ApplicationDbContext _dbContext;
         public CoursesController()
         {
             _dbContext = new ApplicationDbContext();
         }
-
-        public List<Category> Categories { get; set; }
-
-        // GET: Courses
+        
         [Authorize]
-        public ActionResult Create()
+        public ActionResult Create(CourseViewModel viewModel)
         {
-            var viewModel = new CourseViewModel();
+            var course = new Course
             {
-                Categories = _dbContext.Categories.ToList();
+                 LecturerId = User.Identity.GetUserId(),
+                 DateTime = viewModel.GetDataTime(),
+                 CategoryId = viewModel.Category,
+                 Place =viewModel.Place
             };
-            return View(viewModel);
+            _dbContext.Courses.Add(course);
+            _dbContext.SaveChanges();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

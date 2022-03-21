@@ -11,7 +11,7 @@ namespace _1911065701_LeHuuVang_BigSchool.Models
     {        
           public DbSet<Course> Courses { get; set; }
           public DbSet<Category> Categories { get; set; }
-            public ApplicationDbContext()
+        public ApplicationDbContext()
                 : base("DefaultConnection", throwIfV1Schema: false)
             {
             }
