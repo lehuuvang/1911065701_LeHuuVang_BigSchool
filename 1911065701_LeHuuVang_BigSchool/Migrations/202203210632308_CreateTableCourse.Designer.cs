@@ -6,14 +6,14 @@ namespace _1911065701_LeHuuVang_BigSchool.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
+    [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
     public sealed partial class CreateTableCourse : IMigrationMetadata
     {
         private readonly ResourceManager Resources = new ResourceManager(typeof(CreateTableCourse));
         
         string IMigrationMetadata.Id
         {
-            get { return "202203140737126_CreateTableCourse"; }
+            get { return "202203210632308_CreateTableCourse"; }
         }
         
         string IMigrationMetadata.Source

@@ -6,14 +6,14 @@ namespace _1911065701_LeHuuVang_BigSchool.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
+    [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
     public sealed partial class InitialModel : IMigrationMetadata
     {
         private readonly ResourceManager Resources = new ResourceManager(typeof(InitialModel));
         
         string IMigrationMetadata.Id
         {
-            get { return "202203140700251_InitialModel"; }
+            get { return "202203210629573_InitialModel"; }
         }
         
         string IMigrationMetadata.Source

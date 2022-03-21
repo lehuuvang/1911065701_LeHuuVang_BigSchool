@@ -6,14 +6,14 @@ namespace _1911065701_LeHuuVang_BigSchool.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
+    [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
     public sealed partial class PopulateCategoryTable : IMigrationMetadata
     {
         private readonly ResourceManager Resources = new ResourceManager(typeof(PopulateCategoryTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "202203140739404_PopulateCategoryTable"; }
+            get { return "202203210635031_PopulateCategoryTable"; }
         }
         
         string IMigrationMetadata.Source
